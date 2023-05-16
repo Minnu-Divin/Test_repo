@@ -16,5 +16,15 @@ pipeline {
         echo "Deploying the changes"
        }
       }
+    post{
+      always{
+        echo "execute on success and failure"
+      }
+      success{
+        echo "execute on success"
+      }
+      failure{
+        echo "execute on failure"
+      }
     }
    }        
